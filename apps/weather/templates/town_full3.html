@@ -1,0 +1,73 @@
+{% extends "index.html" %}
+{% load cms_tags sekizai_tags staticfiles filters %}
+
+
+{% block map_wrapper %} wrapper-without-map{% endblock %}
+
+{% block head %}
+<header>
+    <a href="" title="" class="banner"><img src="{{ STATIC_URL }}images/banner1.jpg" alt="" title="" /></a>
+    <div class="info-block">
+        <div class="blue-part">
+        </div>
+        <div class="header-inner">
+            <div class="now-weather">
+                <span>
+                    {{ town.region.name }}, {{ town }}
+                    <a href="/" class="change-city" title="">Сменить город?</a>
+                </span>
+                <img src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                {{ town|current_weather:all_data_for_town }}&deg;С
+            </div>
+            <a href="" title="RateForecast.ru" class="logo"><img src="{{ STATIC_URL }}images/logo.png" alt="RateForecast.ru" title="RateForecast.ru" /></a>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+
+{% block section %}
+<section>
+	<a href="#" title="" class="banner"><img src="{{ STATIC_URL }}images/banner2.jpg" alt="" title="" /></a>
+	<h1><a href="/{{ town.town_url }}">{{ town.name }}</a></h1>
+	<article class="weather-wating article-weather-wating">
+		<table>
+			<thead>
+				<tr class="white-tr">
+					<th>&nbsp;</th>
+					<th colspan="4">{{ now|date:"d b" }}</th>
+					<th colspan="4">{{ now|day:1|date:"d b" }}</th>
+					<th colspan="4">{{ now|day:2|date:"d b" }}</th>
+				</tr>
+				<tr>
+					<th class="img">Часы »»»</th>
+					<th>04:00</th>
+					<th>10:00</th>
+					<th>16:00</th>
+					<th class="time-end">22:00</th>
+					<th>04:00</th>
+					<th>10:00</th>
+					<th>16:00</th>
+					<th class="time-end">22:00</th>
+					<th>04:00</th>
+					<th>10:00</th>
+					<th>16:00</th>
+					<th>22:00</th>
+				</tr>
+			</thead>
+			<tbody>
+                {% for town_meteo in town_meteos %}
+                <tr>
+                    <td>
+                        <img src="{{ MEDIA_URL }}{{ town_meteo.meteocenter.flag }}"  width="30" height="20" />
+                        <a href="{{ town_meteo.meteocenter.link }}">{{ town_meteo.meteocenter.showing_name }}</a>
+                    </td>
+                    {% get_town_full3 town_meteo all_data_for_town %}
+                </tr>
+                {% endfor %}
+			</tbody>
+		</table>
+	</article>
+	<div class="clear-all"></div>
+</section>
+{% endblock %}

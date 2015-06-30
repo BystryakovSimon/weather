@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+{% load cms_tags menu_tags sekizai_tags staticfiles cache filters %}
+
+{% block map_wrapper %} wrapper-without-map{% endblock %}
+
+{% block head %}
+<header>
+    <a href="" title="" class="banner"><img src="{{ STATIC_URL }}images/banner1.jpg" alt="" title="" /></a>
+    <div class="info-block">
+        <div class="blue-part">
+        </div>
+        <div class="header-inner">
+            <a href="" title="RateForecast.ru" class="logo"><img src="{{ STATIC_URL }}images/logo.png" alt="RateForecast.ru" title="RateForecast.ru" /></a>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% block section %}
+<section>
+	<a href="#" title="" class="banner"><img src="{{ STATIC_URL }}images/banner2.jpg" alt="" title="" /></a>
+	<h1>Россия</h1>
+	<article class="multicolumn">
+		<dl>
+        {% for region in all_regions %}
+			<dt>{{ region.name }}</dt>
+				<dd>
+					<ul>
+                        {% for town in region|get_towns_for_region %}
+						<li><a href="/{{ town.town_url }}">{{ town.name }}</a></li>
+                        {% endfor %}
+					</ul>
+				</dd>
+        {% endfor %}
+		</dl>
+	</article>
+	<div class="clear-all"></div>
+</section>
+{% endblock %}
+

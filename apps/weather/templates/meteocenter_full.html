@@ -1,0 +1,34 @@
+{% load cache %}
+{% load cms_tags  menu_tags sekizai_tags filters staticfiles %}
+<!doctype html>
+<html>
+<head>
+<title>Данные  {{ meteocenter.name }} для {{ town }}</title>
+  {% render_block "css" %}
+  {% addtoblock "css" %}
+  {% endaddtoblock %}
+  {% render_block "js" %} 
+  {% addtoblock "js" %}
+  {% endaddtoblock %}
+</head>
+  <body>
+    <img src="{{ MEDIA_URL }}{{ town.flag_small }}"  width="30" height="20" />{{ town }}
+    <table border=1>
+       <tr>
+         <td></td>
+         <td>{{ now|date:"d b" }}</td> 
+         <td>{{ now|date_tommorow|date:"d b" }}</td>
+         <td>{{ now|date_tommorow2|date:"d b" }}</td>
+       </tr>
+       {% for providedatas %}
+         <tr>
+          <td>
+            {{ providedatas.g_hashtag.name }}
+          </td>
+          {% get_data_by_g_hashtag providedatas meteocenter meteocenter_data_for_town %}
+         </tr>
+       {% endfor %}
+    </table>
+
+</body>
+</html>

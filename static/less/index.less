@@ -1,0 +1,395 @@
+﻿.map-wrapper {
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	z-index: 99;
+	border-bottom: 1px solid @grey;
+
+	.baloon {
+		position: absolute;
+		display: block;
+		text-align: center;
+		color: @blue;
+
+		img {
+			margin-top: 14px;
+		}
+
+		span {
+			display: block;
+			font-size: 12px;
+			left: 11px;
+			padding: 3px 0;
+			position: absolute;
+			right: 11px;
+			top: 25px;
+			background: fadeout(@white, 40%) 0 0 no-repeat;
+		}
+	}
+	.baloon-big {
+		.baloon;
+		width: 88px;
+		height: 132px;
+		background: url(../images/baloon-big.png) left top no-repeat;
+
+	}
+	.baloon-mid {
+		.baloon;
+		width: 44px;
+		height: 66px;
+		background: url(../images/baloon-mid.png) left top no-repeat;
+
+		span {
+			font-size: 10px;
+			left: 5px;
+			right: 5px;
+			top: 12px;
+		}
+
+		img {
+			margin-top: 4px;
+			width: 35px;
+		}
+	}
+	.baloon-min {
+		.baloon;
+		width: 24px;
+		height: 36px;
+		background: url(../images/baloon-small.png) left top no-repeat;
+		font-size: 10px;
+		padding-top: 5px;
+
+		span {
+			left: 6px;
+			right: 6px;
+			top: 11px;
+		}
+
+		img {
+			margin-top: 4px;
+			width: 25px;
+		}
+	}
+}
+.wrapper {
+	width: 100%;
+	min-width: 1000px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+}
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	height: 152px;
+	
+	.banner {
+		width: 1000px;
+		height: 60px;
+		margin: 10px auto;
+		display: block;
+	}
+	
+	.info-block {
+		width: 100%;
+		height: 70px;
+		border-top: 1px solid @grey;
+		border-bottom: 1px solid @grey;
+		background: @white;
+		position: relative;
+		
+		.blue-part {
+			height: 70px;
+			width: 1000px;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: -1120px;
+			background: @blue;
+			
+			&:after {
+				content: "";
+				position: absolute;
+				right: -31px;
+				top: 0px;
+				border-left: 31px solid @blue;
+				border-top: 35px solid transparent;
+				border-bottom: 35px solid transparent;
+			}
+		}
+		
+		.header-inner {
+			height: 70px;
+			margin: 0 auto;
+			position: relative;
+			width: 935px;
+			z-index: 101;
+			padding-top: 15px;
+			
+			.now-weather {
+				float: right;
+				font-size: 18px;
+				height: 55px;
+				line-height: 54px;
+				margin-top: -9px;
+				position: relative;
+				text-align: right;
+				width: 500px;
+				
+				img {
+					vertical-align: middle;
+				}
+				span {
+					position: relative;
+					.change-city {
+						color: @font-grey;
+						font-family: @arial;
+						font-size: 11px;
+						font-style: italic;
+						line-height: normal;
+						position: absolute;
+						right: 6px;
+						top: 22px;
+						border-bottom: 1px dotted @font-grey;
+						
+						&:hover {
+							border: none;
+						}
+					}
+				}
+			}
+			
+			.logo {
+				width: 228px;
+				height: 32px;
+				display: block;
+			}
+		}
+	}
+}
+
+.weather-wating {
+	position: absolute;
+	top: 162px;
+	left: 50%;
+	margin-left: -500px;
+	width: 250px;
+	border: 1px solid @grey;
+	z-index: 1010;
+	background: @white;
+	padding-bottom: 6px;
+	
+	.avg {
+		background: @blue;
+		color: @white;
+		text-align: center;
+		font-size: 15px;
+		position: relative;
+		height: 42px;
+		padding: 9px 10px 0px;
+		margin-bottom: 23px;
+			
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: -18px;
+			left: 0px;
+			border-top: 18px solid @blue;
+			border-left: 125px solid transparent;
+			border-right: 125px solid transparent;
+		}
+	}
+	
+	table {
+		margin: 0px 10px;
+		width: 230px;
+		td {
+			border-bottom: 1px solid @grey;
+			color: @grey-dark;
+			font-size: 10px;
+			vertical-align: top;
+			padding-bottom: 5px;
+			padding-top: 5px;
+			
+			&.img {
+				width: 75px;
+				padding-right: 10px;
+				vertical-align: middle;
+				text-align: right;
+			}
+			&.info {
+				div {
+					position: relative;
+					img.type {
+						position: absolute;
+						right: 0px;
+						top: 0px;
+						width: 43px;
+						 z-index: 102;
+					}
+					p {
+						margin: 0px;
+						background: fadeout(@white, 30%);
+						z-index: 103;
+						position: relative;
+						&.degree {
+							color: @black;
+							font-size: 14px;
+							background: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	p.more-stat {
+		padding: 5px 9px 0px;
+		color: @grey-dark;
+		font-size: 12px;
+		margin: 0px;
+	}
+		
+	a.more-stat {
+		color: @blue;
+		padding: 5px 8px 6px 9px;
+		font-size: 12px;
+	}
+}
+
+section {
+	width: 1000px;
+	margin: -200px auto 0px;
+	position: relative;
+	z-index: 101;
+	
+	.banner {
+		display: block;
+		width: 240px;
+		height: 400px;
+		float: right;
+		z-index: 103;
+		position: relative;
+	}
+	
+	.graphics {
+		width: 1000px;
+		height: 626px;
+		position: relative;
+		z-index: 102;
+		
+		.ui-tabs {
+			padding-top: 158px;
+		}
+	
+		.ui-tabs-panel {
+			background: @white;
+			width: 750px;
+			height: 425px;
+			border: 1px solid @grey;
+			margin-top: -1px;
+		}
+	}
+	
+	.ui-tabs-panel {
+		border: 1px solid @grey;
+		margin-top: -1px;
+		width: 750px;
+	}
+	
+	.ui-tabs-nav {
+		height: 40px;
+		border: 1px solid @grey;
+		background: @white;
+		width: 750px;
+		margin: 0px;
+		padding: 0px;
+		li {
+			display: block;
+			width: 250px;
+			height: 40px;
+			float: right;
+			a {
+				display: block;
+				width: 215px;
+				height: 40px;
+				float: right;
+				line-height: 36px;
+				font-size: 16px;
+				padding-left: 35px;
+				position: relative;
+				&:after {
+					background: url(../images/angle.png) no-repeat left top;
+					width: 20px;
+					height: 40px;
+					position: absolute;
+					right: -20px;
+					top: 0;
+					content: "";
+				}
+				&:hover {
+					background: @blue;
+					color: @white;
+					&:after {
+						background: url(../images/angle2.png) no-repeat left top;
+					}
+				}
+			}
+		
+			
+			
+			&:first-child {
+				width: 250px;
+				a {
+					width: 215px;
+					&:after {
+						display: none;
+					}
+				}
+			}
+			&:last-child {
+				a {
+					width: 235px;
+					padding-left: 15px;
+				}
+			}
+			&.selected {
+				a {
+					background: @blue;
+					color: @white;
+					&:after {
+						background: url(../images/angle2.png) no-repeat left top;
+					}
+				}
+			}	
+		}
+	}
+}
+
+footer {
+	margin-top: 85px;
+	margin-bottom: 85px;
+	.copyright {
+		border-top: 1px solid @black;
+		text-align: center;
+		span {
+			background: @white;
+			font-size: 18px;
+			padding: 0 20px;
+			position: relative;
+			top: -14px;
+		}
+	}
+}

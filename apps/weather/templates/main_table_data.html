@@ -1,0 +1,19 @@
+					{% load filters %}
+					<tr>
+						<td class="img"><a href="{{ meteocenter_link }}" title=""><img height="30" width="80" src="/media/{{ meteocenter_flag }}" alt="" title="" /></a></td>
+						<td class="info">
+							<div>
+							<img class="type" src="/static/images/types/sun.png" alt="" title="" />
+							<p class="degree">{% if town_meteo_data_today.max %}
+												{{ town_meteo_data_today.max|get_plus_or_minus }}&deg;С
+												{% endif %}
+												{% if town_meteo_data_today.min %}
+												...{{ town_meteo_data_today.min|get_plus_or_minus }}&deg;С
+											  {% endif %}</p>
+							<p>Обещают на {{ town_meteo_data_today.date_f }}</p>
+							<p>Взято {{ town_meteo_data_today.date_upd }}г. в {{ town_meteo_data_today.time_upd }}</p>
+							</div>
+						</td>
+					</tr>
+
+

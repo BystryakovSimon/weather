@@ -1,0 +1,32 @@
+{% load cms_tags  menu_tags sekizai_tags filters cache staticfiles %}
+            <div id="avg_t" style="width: 800px; height: 500px;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="copyright"><span>2013 &copy; RateForecast.ru</span></div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        {% cache 500 today_gr %}
+          {{ today_gr_forecasts.gr_shapka|safe }},
+          {% for o in today_gr_forecasts.data %}
+          {{ o|safe }},
+          {% endfor %}
+        {% endcache %}
+        ]);
+
+      var options = {
+        title: ''
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('avg_t'));
+      chart.draw(data, options);
+    }
+  </script> 

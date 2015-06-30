@@ -1,0 +1,50 @@
+{% extends "index.html" %}
+{% load cms_tags sekizai_tags staticfiles filters %}
+
+
+{% block map_wrapper %} wrapper-without-map{% endblock %}
+
+{% block head %}
+<header>
+    <a href="" title="" class="banner"><img src="{{ STATIC_URL }}images/banner1.jpg" alt="" title="" /></a>
+    <div class="info-block">
+        <div class="blue-part">
+        </div>
+        <div class="header-inner">
+            <div class="now-weather">
+                <span>
+                    {{ town.region.name }}, {{ town }}
+                    <a href="/" class="change-city" title="">Сменить город?</a>
+                </span>
+                <img src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                {{ town|current_weather:all_data_for_town }}&deg;С
+            </div>
+            <a href="" title="RateForecast.ru" class="logo"><img src="{{ STATIC_URL }}images/logo.png" alt="RateForecast.ru" title="RateForecast.ru" /></a>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+
+{% block section %}
+<section>
+	<a href="#" title="" class="banner"><img src="{{ STATIC_URL }}images/banner2.jpg" alt="" title="" /></a>
+	<h1><a href="/{{ town.town_url }}">{{ town.name }}</a></h1>
+	<article class="weather-wating article-weather-wating">
+		<table>
+            <thead>
+                <tr class="white-tr">
+                    <th>&nbsp;</th>
+                    <th colspan="12">{{ now|date:"d b" }}</th>
+                </tr>
+            </thead>
+			<tbody>
+                {% for town_meteo in town_meteos %}
+                {% get_town_full town_meteo all_data_for_town %}
+                {% endfor %}
+			</tbody>
+		</table>
+	</article>
+	<div class="clear-all"></div>
+</section>
+{% endblock %}

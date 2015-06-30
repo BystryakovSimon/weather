@@ -1,0 +1,83 @@
+﻿@font-face {
+    font-family: 'marmelad-regular';
+    src: url('../fonts/marmelad-regular.eot');
+    src: url('../fonts/marmelad-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/marmelad-regular.svg#marmeladregular') format('svg'),
+         url('../fonts/marmelad-regular.woff') format('woff'),
+         url('../fonts/marmelad-regular.ttf') format('truetype');
+         
+    font-weight: normal;
+    font-style: normal;
+}
+@font-main: 'marmelad-regular';
+@arial: Arial;
+
+@white: #fff;
+@black: #000;
+@blue: #2f56a6;
+@grey: #d1d1d1;
+@font-grey: #b3b3b3;
+@grey-dark: #727272;
+
+
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.columns(@columns: 3) {
+  -webkit-columns: @columns;
+  -moz-columns: @columns;
+  -ms-columns: @columns;
+  -o-columns: @columns;
+  columns: @columns;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+	font-family: @font-main;
+	color: @black;
+	font-size: 14px;
+	background: @white;
+	padding: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: @font-main;
+	text-transform: uppercase;
+	font-weight: normal;
+	margin: 0px;
+}
+
+h1 {
+	margin-bottom: 10px;
+}
+
+a {
+	color: @black;
+	text-decoration: none;
+}
+
+
+p {
+	margin:0px 0px 10px;
+}
+
+.clear-all {
+    height: 1px;
+    overflow: hidden;
+    width: 100%;
+	color: @white;
+	clear: both;
+}
+
+@import "index.less"; 
+@import "main.less"; 
+@import "all.less"; 

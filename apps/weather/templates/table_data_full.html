@@ -1,0 +1,441 @@
+<tr class="time">
+    <td rowspan="4" class="img"><a title="" href="{{ town_meteo.meteocenter.link }}"><img title="" alt="" src="{{ MEDIA_URL }}{{ town_meteo.meteocenter.flag }}">{{ town_meteo.meteocenter.showing_name }}</a></td>
+    <td>00:00</td>
+    <td>01:00</td>
+    <td>02:00</td>
+    <td>03:00</td>
+    <td>04:00</td>
+    <td>05:00</td>
+    <td>06:00</td>
+    <td>07:00</td>
+    <td>08:00</td>
+    <td>09:00</td>
+    <td>10:00</td>
+    <td>11:00</td>
+</tr>
+<tr>
+    <td class="info">
+        {% if town_meteo_data_day1.max_0 or town_meteo_data_day1.min_0 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_0 %}
+                {{ town_meteo_data_day1.max_0 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_0 %}
+            {% if town_meteo_data_day1.max_0 %}...{% endif %}
+                {{ town_meteo_data_day1.min_0 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_1 or town_meteo_data_day1.min_1 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_1 %}
+                {{ town_meteo_data_day1.max_1 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_1 %}
+            {% if town_meteo_data_day1.max_1 %}...{% endif %}
+                {{ town_meteo_data_day1.min_1 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_2 or town_meteo_data_day1.min_2 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_2 %}
+                {{ town_meteo_data_day1.max_2 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_2 %}
+            {% if town_meteo_data_day1.max_2 %}...{% endif %}
+                {{ town_meteo_data_day1.min_2 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_3 or town_meteo_data_day1.min_3 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_3 %}
+                {{ town_meteo_data_day1.max_3 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_3 %}
+            {% if town_meteo_data_day1.max_3 %}...{% endif %}
+                {{ town_meteo_data_day1.min_3 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_4 or town_meteo_data_day1.min_4 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_4 %}
+                {{ town_meteo_data_day1.max_4 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_4 %}
+            {% if town_meteo_data_day1.max_4 %}...{% endif %}
+                {{ town_meteo_data_day1.min_4 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_5 or town_meteo_data_day1.min_5 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_5 %}
+                {{ town_meteo_data_day1.max_5 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_5 %}
+            {% if town_meteo_data_day1.max_5 %}...{% endif %}
+                {{ town_meteo_data_day1.min_5 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_6 or town_meteo_data_day1.min_6 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_6 %}
+                {{ town_meteo_data_day1.max_6 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_6 %}
+            {% if town_meteo_data_day1.max_6 %}...{% endif %}
+                {{ town_meteo_data_day1.min_6 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_7 or town_meteo_data_day1.min_7 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_7 %}
+                {{ town_meteo_data_day1.max_7 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_7 %}
+            {% if town_meteo_data_day1.max_7 %}...{% endif %}
+                {{ town_meteo_data_day1.min_7 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_8 or town_meteo_data_day1.min_8 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_8 %}
+                {{ town_meteo_data_day1.max_8 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_8 %}
+            {% if town_meteo_data_day1.max_8 %}...{% endif %}
+                {{ town_meteo_data_day1.min_8 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_9 or town_meteo_data_day1.min_9 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_9 %}
+                {{ town_meteo_data_day1.max_9 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_9 %}
+            {% if town_meteo_data_day1.max_9 %}...{% endif %}
+                {{ town_meteo_data_day1.min_9 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_10 or town_meteo_data_day1.min_10 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_10 %}
+                {{ town_meteo_data_day1.max_10 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_10 %}
+            {% if town_meteo_data_day1.max_10 %}...{% endif %}
+                {{ town_meteo_data_day1.min_10 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_11 or town_meteo_data_day1.min_11 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_11 %}
+                {{ town_meteo_data_day1.max_11 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_11 %}
+            {% if town_meteo_data_day1.max_11 %}...{% endif %}
+                {{ town_meteo_data_day1.min_11 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+
+</tr>
+<tr class="time">
+    <td>12:00</td>
+    <td>13:00</td>
+    <td>14:00</td>
+    <td>15:00</td>
+    <td>16:00</td>
+    <td>17:00</td>
+    <td>18:00</td>
+    <td>19:00</td>
+    <td>20:00</td>
+    <td>21:00</td>
+    <td>22:00</td>
+    <td>23:00</td>
+</tr>
+<tr>
+    <td class="info">
+        {% if town_meteo_data_day1.max_12 or town_meteo_data_day1.min_12 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_12 %}
+                {{ town_meteo_data_day1.max_12 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_12 %}
+            {% if town_meteo_data_day1.max_12 %}...{% endif %}
+                {{ town_meteo_data_day1.min_12 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_13 or town_meteo_data_day1.min_13 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_13 %}
+                {{ town_meteo_data_day1.max_13 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_13 %}
+            {% if town_meteo_data_day1.max_13 %}...{% endif %}
+                {{ town_meteo_data_day1.min_13 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_14 or town_meteo_data_day1.min_14 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_14 %}
+                {{ town_meteo_data_day1.max_14 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_14 %}
+            {% if town_meteo_data_day1.max_14 %}...{% endif %}
+                {{ town_meteo_data_day1.min_14 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_15 or town_meteo_data_day1.min_15 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_15 %}
+                {{ town_meteo_data_day1.max_15 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_15 %}
+            {% if town_meteo_data_day1.max_15 %}...{% endif %}
+                {{ town_meteo_data_day1.min_15 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_16 or town_meteo_data_day1.min_16 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_16 %}
+                {{ town_meteo_data_day1.max_16 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_16 %}
+            {% if town_meteo_data_day1.max_16 %}...{% endif %}
+                {{ town_meteo_data_day1.min_16 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_17 or town_meteo_data_day1.min_17 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_17 %}
+                {{ town_meteo_data_day1.max_17 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_17 %}
+            {% if town_meteo_data_day1.max_17 %}...{% endif %}
+                {{ town_meteo_data_day1.min_17 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_18 or town_meteo_data_day1.min_18 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_18 %}
+                {{ town_meteo_data_day1.max_18 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_18 %}
+            {% if town_meteo_data_day1.max_18 %}...{% endif %}
+                {{ town_meteo_data_day1.min_18 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_19 or town_meteo_data_day1.min_19 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_19 %}
+                {{ town_meteo_data_day1.max_19 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_19 %}
+            {% if town_meteo_data_day1.max_19 %}...{% endif %}
+                {{ town_meteo_data_day1.min_19 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_20 or town_meteo_data_day1.min_20 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_20 %}
+                {{ town_meteo_data_day1.max_20 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_20 %}
+            {% if town_meteo_data_day1.max_20 %}...{% endif %}
+                {{ town_meteo_data_day1.min_20 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_21 or town_meteo_data_day1.min_21 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_21 %}
+                {{ town_meteo_data_day1.max_21 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_21 %}
+            {% if town_meteo_data_day1.max_21 %}...{% endif %}
+                {{ town_meteo_data_day1.min_21 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_22 or town_meteo_data_day1.min_22 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_22 %}
+                {{ town_meteo_data_day1.max_22 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_22 %}
+            {% if town_meteo_data_day1.max_22 %}...{% endif %}
+                {{ town_meteo_data_day1.min_22 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+
+    <td class="info">
+        {% if town_meteo_data_day1.max_23 or town_meteo_data_day1.min_23 %}
+            <div>
+        <img class="type" src="/static/images/types/sun.png" alt="" title="" />
+        <p class="degree">
+            {% if town_meteo_data_day1.max_23 %}
+                {{ town_meteo_data_day1.max_23 }}°C
+            {% endif %}
+            {% if town_meteo_data_day1.min_23 %}
+            {% if town_meteo_data_day1.max_23 %}...{% endif %}
+                {{ town_meteo_data_day1.min_23 }}°C
+            {% endif %}
+        {% endif %}
+        </p>
+        </div>
+    </td>
+</tr>

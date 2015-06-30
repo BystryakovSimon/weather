@@ -1,0 +1,139 @@
+{% load filters %}
+{% load cache %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Рейтинг метеоцентров</title>
+
+
+</head>
+  <body>
+  <form action="" method="post">
+                {% csrf_token %}
+                {{ cityselect }}
+                <input type="submit" value="Смотреть" /></br></br>
+        <br />
+</form>
+        <p align="center">
+        {% cache 500 temp_range %}
+          <b>В ближайшее время ожидается от {{ last_temp_range_min }} до {{ last_temp_range_max }}</b>
+        {% endcache %}
+        </p>
+        <b>Текущая температура {{ town|current_weather:all_data_for_town }}
+          <img src="{{ MEDIA_URL }}{{ town.flag_small }}"  width="30" height="20" />{{ town }}</b>
+    <table border=1>
+       <tr>
+         <td></td>
+         <td>{{ now|date:"d b" }}</td> 
+         <td>{{ now|date_tommorow|date:"d b" }}</td>
+         <td>{{ now|date_tommorow2|date:"d b" }}</td>
+       </tr>
+      {% cache 500 forecast_rating_table %}
+        {% for town_meteo in town_meteos %}
+        <tr>
+          <td><img src="{{ MEDIA_URL }}{{ town_meteo.meteocenter.flag }}"  width="30" height="20" />
+            <a href="{{ town_meteo.meteocenter.link }}">{{ town_meteo.meteocenter.showing_name }}</a></td>
+          {% get_data_by_tm town_meteo all_data_for_town %}
+        </tr>
+        {% endfor %}
+      {% endcache %}
+    </table>
+<br />
+    <div id="chart_div" style="width: 1000px; height: 500px;"></div>
+    <div id="avg_t" style="width: 1000px; height: 500px;"></div> 
+<br /><br /><br />
+<b>Карта- {{ town.region.name }}</b><br />
+    <div id="map" style="width:1200px; height:500px"></div>
+<br /><br />
+
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          {% cache 500 3days_gr %}
+            {{ 3days_gr_forecasts.gr_shapka|safe }},
+            {% for o in 3days_gr_forecasts.data %}
+            {{ o|safe }},
+            {% endfor %}
+          {% endcache %}
+          ]);
+        var options = {
+          title: 'Прогноз на 3 дня'
+        };
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          {% cache 500 today_gr %}
+            {{ today_gr_forecasts.gr_shapka|safe }},
+            {% for o in today_gr_forecasts.data %}
+            {{ o|safe }},
+            {% endfor %}
+          {% endcache %}
+          ]);
+
+        var options = {
+          title: 'Прогноз на сутки'
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('avg_t'));
+        chart.draw(data, options);
+      }
+    </script> 
+
+    
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="//api-maps.yandex.ru/2.0.18/?load=package.standard,package.clusters&lang=ru-RU" type="text/javascript"></script>
+<style>
+    .cluster-balloon-item {
+        margin: 10px;
+        cursor: pointer;
+    }
+    
+    #map {
+        width: 400px;
+        height: 300px;
+    }
+</style>
+
+<script type="text/javascript">
+var myMap;
+ymaps.ready(init);
+function init () {
+    var myMap = new ymaps.Map("map", {
+            center: {{ town|get_center_map|safe }},
+            zoom: 8
+        });
+        myMap.controls
+
+        {% cache 500 towns_in_region_map %}
+            {% for towns in towns_in_region  %}
+                Placemark{{ towns.id }} = new ymaps.Placemark({{ towns.geo }}, {
+                    balloonContentHeader: "{{ towns.name }}",
+                    balloonContentBody: 'Ожидается от {{ towns|range_t_min:temp_range }} до {{ towns|range_t_max:temp_range }}',
+                    hintContent: "Рейтинг погодных метеоцентров",
+                    iconContent: '{{ towns|range_t_min:temp_range }}°C...{{ towns|range_t_max:temp_range }}°C',
+                },
+                {
+                  preset: "twirl#blueStretchyIcon",
+                }),
+            {% endfor %}
+            {% for map_town in town.region|get_towns_for_region  %}
+            myMap.geoObjects.add(Placemark{{ map_town.id }})
+            {% endfor %}
+        {% endcache %}
+}
+</script>
+</body>
+</html>

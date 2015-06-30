@@ -1,0 +1,1890 @@
+	{% extends "index.html" %}
+{% load cms_tags sekizai_tags %}
+{% load staticfiles %}
+
+{% block main %}
+    <section>
+        <a href="#" title="" class="banner"><img src="{{ STATIC_URL }}images/banner2.jpg" alt="" title="" /></a>
+        <h1>{{ town }}</h1>
+        <article class="weather-wating article-weather-wating">
+
+            <div class="ui-tabs" id="tabs">
+                <ul class="ui-tabs-nav">
+                    <li id="tabs-3"><a href="#" title="3">Прогноз на неделю</a></li>
+                    <li id="tabs-2"><a href="#" title="2">Прогноз на 3 дня</a></li>
+                    <li id="tabs-1" class="selected"><a href="#" title="1">Прогноз на сутки</a></li>
+                </ul>
+                <div class="ui-tabs-panel" id="tabs-1">
+                    <table>
+                        <thead>
+                            <tr class="white-tr">
+                                <th>&nbsp;</th>
+                                <th colspan="12">Пн, 26 марта 2013 г.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="time">
+                                <td class="img" rowspan="4"><a href="#" title=""><img src="{{ STATIC_URL }}images/meteobase1.png" alt="" title="" /></a></td>
+                                <td>00:00</td>
+                                <td>01:00</td>
+                                <td>02:00</td>
+                                <td>03:00</td>
+                                <td>04:00</td>
+                                <td>05:00</td>
+                                <td>06:00</td>
+                                <td>07:00</td>
+                                <td>08:00</td>
+                                <td>09:00</td>
+                                <td>10:00</td>
+                                <td>11:00</td>
+                            </tr>
+                            <tr>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="time">
+                                <td>12:00</td>
+                                <td>13:00</td>
+                                <td>14:00</td>
+                                <td>15:00</td>
+                                <td>16:00</td>
+                                <td>17:00</td>
+                                <td>18:00</td>
+                                <td>19:00</td>
+                                <td>20:00</td>
+                                <td>21:00</td>
+                                <td>22:00</td>
+                                <td>23:00</td>
+                            </tr>
+                            <tr>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info time-end">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="time">
+                                <td class="img" rowspan="4"><a href="#" title=""><img src="{{ STATIC_URL }}images/meteobase2.png" alt="" title="" /></a></td>
+                                <td>00:00</td>
+                                <td>01:00</td>
+                                <td>02:00</td>
+                                <td>03:00</td>
+                                <td>04:00</td>
+                                <td>05:00</td>
+                                <td>06:00</td>
+                                <td>07:00</td>
+                                <td>08:00</td>
+                                <td>09:00</td>
+                                <td>10:00</td>
+                                <td>11:00</td>
+                            </tr>
+                            <tr>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="time">
+                                <td>12:00</td>
+                                <td>13:00</td>
+                                <td>14:00</td>
+                                <td>15:00</td>
+                                <td>16:00</td>
+                                <td>17:00</td>
+                                <td>18:00</td>
+                                <td>19:00</td>
+                                <td>20:00</td>
+                                <td>21:00</td>
+                                <td>22:00</td>
+                                <td>23:00</td>
+                            </tr>
+                            <tr>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info time-end">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="time">
+                                <td class="img" rowspan="4"><a href="#" title=""><img src="{{ STATIC_URL }}images/meteobase3.png" alt="" title="" /></a></td>
+                                <td>00:00</td>
+                                <td>01:00</td>
+                                <td>02:00</td>
+                                <td>03:00</td>
+                                <td>04:00</td>
+                                <td>05:00</td>
+                                <td>06:00</td>
+                                <td>07:00</td>
+                                <td>08:00</td>
+                                <td>09:00</td>
+                                <td>10:00</td>
+                                <td>11:00</td>
+                            </tr>
+                            <tr>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="time">
+                                <td>12:00</td>
+                                <td>13:00</td>
+                                <td>14:00</td>
+                                <td>15:00</td>
+                                <td>16:00</td>
+                                <td>17:00</td>
+                                <td>18:00</td>
+                                <td>19:00</td>
+                                <td>20:00</td>
+                                <td>21:00</td>
+                                <td>22:00</td>
+                                <td>23:00</td>
+                            </tr>
+                            <tr>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info time-end">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="time">
+                                <td class="img" rowspan="4"><a href="#" title=""><img src="{{ STATIC_URL }}images/meteobase4.png" alt="" title="" /></a></td>
+                                <td>00:00</td>
+                                <td>01:00</td>
+                                <td>02:00</td>
+                                <td>03:00</td>
+                                <td>04:00</td>
+                                <td>05:00</td>
+                                <td>06:00</td>
+                                <td>07:00</td>
+                                <td>08:00</td>
+                                <td>09:00</td>
+                                <td>10:00</td>
+                                <td>11:00</td>
+                            </tr>
+                            <tr>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="time">
+                                <td>12:00</td>
+                                <td>13:00</td>
+                                <td>14:00</td>
+                                <td>15:00</td>
+                                <td>16:00</td>
+                                <td>17:00</td>
+                                <td>18:00</td>
+                                <td>19:00</td>
+                                <td>20:00</td>
+                                <td>21:00</td>
+                                <td>22:00</td>
+                                <td>23:00</td>
+                            </tr>
+                            <tr>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info time-end">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="time">
+                                <td class="img" rowspan="4"><a href="#" title=""><img src="{{ STATIC_URL }}images/meteobase5.png" alt="" title="" /></a></td>
+                                <td>00:00</td>
+                                <td>01:00</td>
+                                <td>02:00</td>
+                                <td>03:00</td>
+                                <td>04:00</td>
+                                <td>05:00</td>
+                                <td>06:00</td>
+                                <td>07:00</td>
+                                <td>08:00</td>
+                                <td>09:00</td>
+                                <td>10:00</td>
+                                <td>11:00</td>
+                            </tr>
+                            <tr>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="time">
+                                <td>12:00</td>
+                                <td>13:00</td>
+                                <td>14:00</td>
+                                <td>15:00</td>
+                                <td>16:00</td>
+                                <td>17:00</td>
+                                <td>18:00</td>
+                                <td>19:00</td>
+                                <td>20:00</td>
+                                <td>21:00</td>
+                                <td>22:00</td>
+                                <td>23:00</td>
+                            </tr>
+                            <tr>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info time-end">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="time">
+                                <td class="img" rowspan="4"><a href="#" title=""><img src="{{ STATIC_URL }}images/meteobase6.png" alt="" title="" /></a></td>
+                                <td>00:00</td>
+                                <td>01:00</td>
+                                <td>02:00</td>
+                                <td>03:00</td>
+                                <td>04:00</td>
+                                <td>05:00</td>
+                                <td>06:00</td>
+                                <td>07:00</td>
+                                <td>08:00</td>
+                                <td>09:00</td>
+                                <td>10:00</td>
+                                <td>11:00</td>
+                            </tr>
+                            <tr>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="time">
+                                <td>12:00</td>
+                                <td>13:00</td>
+                                <td>14:00</td>
+                                <td>15:00</td>
+                                <td>16:00</td>
+                                <td>17:00</td>
+                                <td>18:00</td>
+                                <td>19:00</td>
+                                <td>20:00</td>
+                                <td>21:00</td>
+                                <td>22:00</td>
+                                <td>23:00</td>
+                            </tr>
+                            <tr>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info time-end">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="ui-tabs" id="tabs">
+                <ul class="ui-tabs-nav">
+                    <li id="tabs-3"><a href="#" title="3">Прогноз на неделю</a></li>
+                    <li id="tabs-2" class="selected"><a href="#" title="2">Прогноз на 3 дня</a></li>
+                    <li id="tabs-1"><a href="#" title="1">Прогноз на сутки</a></li>
+                </ul>
+                <div class="ui-tabs-panel" id="tabs-1">
+                    <table>
+                        <thead>
+                            <tr class="white-tr">
+                                <th>&nbsp;</th>
+                                <th colspan="4">Пн, 24 марта 2013 г.</th>
+                                <th colspan="4">Пн, 25 марта 2013 г.</th>
+                                <th colspan="4">Пн, 26 марта 2013 г.</th>
+                            </tr>
+                            <tr>
+                                <th class="img">Часы &raquo;&raquo;&raquo;</th>
+                                <th>00:00</th>
+                                <th>06:00</th>
+                                <th>12:00</th>
+                                <th class="time-end">23:00</th>
+                                <th>00:00</th>
+                                <th>06:00</th>
+                                <th>12:00</th>
+                                <th class="time-end">23:00</th>
+                                <th>00:00</th>
+                                <th>06:00</th>
+                                <th>12:00</th>
+                                <th>23:00</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="img"><a href="#" title=""><img src="{{ STATIC_URL }}images/meteobase1.png" alt="" title="" /></a></td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info time-end">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info time-end">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="img"><a href="#" title=""><img src="{{ STATIC_URL }}images/meteobase2.png" alt="" title="" /></a></td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info time-end">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info time-end">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="img"><a href="#" title=""><img src="{{ STATIC_URL }}images/meteobase3.png" alt="" title="" /></a></td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info time-end">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info time-end">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="img"><a href="#" title=""><img src="{{ STATIC_URL }}images/meteobase4.png" alt="" title="" /></a></td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info time-end">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info time-end">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="img"><a href="#" title=""><img src="{{ STATIC_URL }}images/meteobase5.png" alt="" title="" /></a></td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info time-end">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info time-end">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="img"><a href="#" title=""><img src="{{ STATIC_URL }}images/meteobase6.png" alt="" title="" /></a></td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info time-end">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info time-end">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">от +12&deg;С<br />до +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="ui-tabs" id="tabs">
+                <ul class="ui-tabs-nav">
+                    <li id="tabs-3" class="selected"><a href="#" title="3">Прогноз на неделю</a></li>
+                    <li id="tabs-2"><a href="#" title="2">Прогноз на 3 дня</a></li>
+                    <li id="tabs-1"><a href="#" title="1">Прогноз на сутки</a></li>
+                </ul>
+                <div class="ui-tabs-panel" id="tabs-1">
+                    <table>
+                        <thead>
+                            <tr class="white-tr">
+                                <th class="img">&nbsp;</th>
+                                <th>24 марта</th>
+                                <th>25 марта</th>
+                                <th>26 марта</th>
+                                <th>27 марта</th>
+                                <th>28 марта</th>
+                                <th>29 марта</th>
+                                <th>30 марта</th>
+                            </tr>
+                            <tr>
+                                <th class="img">Дни &raquo;&raquo;&raquo;</th>
+                                <th>Пн</th>
+                                <th>Вт</th>
+                                <th>Ср</th>
+                                <th>Чт</th>
+                                <th>Пт</th>
+                                <th>Сб</th>
+                                <th>Вс</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="img"><a href="#" title=""><img src="{{ STATIC_URL }}images/meteobase1.png" alt="" title="" /></a></td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="img"><a href="#" title=""><img src="{{ STATIC_URL }}images/meteobase2.png" alt="" title="" /></a></td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="img"><a href="#" title=""><img src="{{ STATIC_URL }}images/meteobase3.png" alt="" title="" /></a></td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="img"><a href="#" title=""><img src="{{ STATIC_URL }}images/meteobase4.png" alt="" title="" /></a></td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="img"><a href="#" title=""><img src="{{ STATIC_URL }}images/meteobase5.png" alt="" title="" /></a></td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="img"><a href="#" title=""><img src="{{ STATIC_URL }}images/meteobase6.png" alt="" title="" /></a></td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun4.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun3.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                                <td class="info">
+                                    <div>
+                                    <img class="type" src="{{ STATIC_URL }}images/types/sun2.png" alt="" title="" />
+                                    <p class="degree">+12&deg;С ... +13&deg;С</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </article>
+        <div class="clear-all"></div>
+    </section>
+{% endblock %}
