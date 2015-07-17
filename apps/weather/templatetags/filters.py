@@ -161,24 +161,25 @@ def get_data(town_meteo_data):
 @register.inclusion_tag('table_data.html')
 def get_data_by_tm(town_meteo, all_data_for_town):
 
-    if cache.get_many([('%s_data_today' % town_meteo)
-            ,('%s_data_tommorow'        % town_meteo)
-            ,('%s_data_tommorow2'       % town_meteo)]):
+#    if cache.get_many([('%s_data_today' % town_meteo)
+#            ,('%s_data_tommorow'        % town_meteo)
+#            ,('%s_data_tommorow2'       % town_meteo)]):
+#
+#        town_meteo_data_today     = cache.get('%s_data_today'     % town_meteo)
+#        town_meteo_data_tommorow  = cache.get('%s_data_tommorow'  % town_meteo)
+#        town_meteo_data_tommorow2 = cache.get('%s_data_tommorow2' % town_meteo)
+#        print 1111
+#    else:
+    all_data_for_tm           = all_data_for_town.filter_by_t_m(town_meteo)
+    town_meteo_data_today     = get_data_h(all_data_for_tm.filter_by_day(now))
+    town_meteo_data_tommorow  = get_data(all_data_for_tm.filter_by_day(now + timedelta(days=1)))
+    town_meteo_data_tommorow2 = get_data(all_data_for_tm.filter_by_day(now + timedelta(days=2)))
 
-        town_meteo_data_today     = cache.get('%s_data_today'     % town_meteo)
-        town_meteo_data_tommorow  = cache.get('%s_data_tommorow'  % town_meteo)
-        town_meteo_data_tommorow2 = cache.get('%s_data_tommorow2' % town_meteo)
-        print 1111
-    else:
-        all_data_for_tm           = all_data_for_town.filter_by_t_m(town_meteo)
-        town_meteo_data_today     = get_data_h(all_data_for_tm.filter_by_day(now))
-        town_meteo_data_tommorow  = get_data(all_data_for_tm.filter_by_day(now + timedelta(days=1)))
-        town_meteo_data_tommorow2 = get_data(all_data_for_tm.filter_by_day(now + timedelta(days=2)))
-
-        cache.set_many({('%s_data_today' % town_meteo): town_meteo_data_today
-            ,('%s_data_tommorow'         % town_meteo): town_meteo_data_tommorow
-            ,('%s_data_tommorow2'        % town_meteo): town_meteo_data_tommorow2})
-        print 2222
+#    cache.set_many({('%s_data_today' % town_meteo): town_meteo_data_today
+#        ,('%s_data_tommorow'         % town_meteo): town_meteo_data_tommorow
+#        ,('%s_data_tommorow2'        % town_meteo): town_meteo_data_tommorow2})
+#    print 2222
+#----------------------------enfif---------
 
 #    all_data_for_tm           = all_data_for_town.filter_by_t_m(town_meteo)
 #
@@ -198,15 +199,16 @@ def get_main_data_by_tm(town_meteo, all_data_for_town):
 
 #    town_meteo_data_today     = get_data_h(all_data_for_tm.filter_by_day(now))
 
-    if cache.get_many([('%s_data_today' % town_meteo)]):
-        town_meteo_data_today = cache.get('%s_data_today' % town_meteo)
-        print 111
-    else:
-        all_data_for_tm       = all_data_for_town.filter_by_t_m(town_meteo)
-        town_meteo_data_today = get_data_h(all_data_for_tm.filter_by_day(now))
+#    if cache.get_many([('%s_data_today' % town_meteo)]):
+#        town_meteo_data_today = cache.get('%s_data_today' % town_meteo)
+#        print 111
+#    else:
+    all_data_for_tm       = all_data_for_town.filter_by_t_m(town_meteo)
+    town_meteo_data_today = get_data_h(all_data_for_tm.filter_by_day(now))
 
-        cache.set_many({('%s_data_today' % town_meteo): town_meteo_data_today})
-        print 222
+    cache.set_many({('%s_data_today' % town_meteo): town_meteo_data_today})
+#    print 222
+#----------------------------enfif---------
 
     return {
         'town_meteo_data_today' : town_meteo_data_today
@@ -262,40 +264,41 @@ def get_town_full7_data(town_meteo_data):
 @register.inclusion_tag('table_data_full7.html')
 def get_town_full7(town_meteo, all_data_for_town):
 
-    if cache.get_many([('%s_data_full7_day1' % town_meteo)
-            ,('%s_data_full7_day2'           % town_meteo)
-            ,('%s_data_full7_day3'           % town_meteo)
-            ,('%s_data_full7_day4'           % town_meteo)
-            ,('%s_data_full7_day5'           % town_meteo)
-            ,('%s_data_full7_day6'           % town_meteo)
-            ,('%s_data_full7_day7'           % town_meteo)]):
+#    if cache.get_many([('%s_data_full7_day1' % town_meteo)
+#            ,('%s_data_full7_day2'           % town_meteo)
+#            ,('%s_data_full7_day3'           % town_meteo)
+#            ,('%s_data_full7_day4'           % town_meteo)
+#            ,('%s_data_full7_day5'           % town_meteo)
+#            ,('%s_data_full7_day6'           % town_meteo)
+#            ,('%s_data_full7_day7'           % town_meteo)]):
+#
+#        town_meteo_data_day1 = cache.get('%s_data_full7_day1' % town_meteo)
+#        town_meteo_data_day2 = cache.get('%s_data_full7_day2' % town_meteo)
+#        town_meteo_data_day3 = cache.get('%s_data_full7_day3' % town_meteo)
+#        town_meteo_data_day4 = cache.get('%s_data_full7_day4' % town_meteo)
+#        town_meteo_data_day5 = cache.get('%s_data_full7_day5' % town_meteo)
+#        town_meteo_data_day6 = cache.get('%s_data_full7_day6' % town_meteo)
+#        town_meteo_data_day7 = cache.get('%s_data_full7_day7' % town_meteo)
+#        print 1111
+#    else:
+    all_data_for_tm      = all_data_for_town.filter_by_t_m(town_meteo)
+    town_meteo_data_day1 = get_town_full7_data(all_data_for_tm.filter_by_day(now))
+    town_meteo_data_day2 = get_town_full7_data(all_data_for_tm.filter_by_day(now + timedelta(days=1)))
+    town_meteo_data_day3 = get_town_full7_data(all_data_for_tm.filter_by_day(now + timedelta(days=2)))
+    town_meteo_data_day4 = get_town_full7_data(all_data_for_tm.filter_by_day(now + timedelta(days=3)))
+    town_meteo_data_day5 = get_town_full7_data(all_data_for_tm.filter_by_day(now + timedelta(days=4)))
+    town_meteo_data_day6 = get_town_full7_data(all_data_for_tm.filter_by_day(now + timedelta(days=5)))
+    town_meteo_data_day7 = get_town_full7_data(all_data_for_tm.filter_by_day(now + timedelta(days=6)))
 
-        town_meteo_data_day1 = cache.get('%s_data_full7_day1' % town_meteo)
-        town_meteo_data_day2 = cache.get('%s_data_full7_day2' % town_meteo)
-        town_meteo_data_day3 = cache.get('%s_data_full7_day3' % town_meteo)
-        town_meteo_data_day4 = cache.get('%s_data_full7_day4' % town_meteo)
-        town_meteo_data_day5 = cache.get('%s_data_full7_day5' % town_meteo)
-        town_meteo_data_day6 = cache.get('%s_data_full7_day6' % town_meteo)
-        town_meteo_data_day7 = cache.get('%s_data_full7_day7' % town_meteo)
-        print 1111
-    else:
-        all_data_for_tm      = all_data_for_town.filter_by_t_m(town_meteo)
-        town_meteo_data_day1 = get_town_full7_data(all_data_for_tm.filter_by_day(now))
-        town_meteo_data_day2 = get_town_full7_data(all_data_for_tm.filter_by_day(now + timedelta(days=1)))
-        town_meteo_data_day3 = get_town_full7_data(all_data_for_tm.filter_by_day(now + timedelta(days=2)))
-        town_meteo_data_day4 = get_town_full7_data(all_data_for_tm.filter_by_day(now + timedelta(days=3)))
-        town_meteo_data_day5 = get_town_full7_data(all_data_for_tm.filter_by_day(now + timedelta(days=4)))
-        town_meteo_data_day6 = get_town_full7_data(all_data_for_tm.filter_by_day(now + timedelta(days=5)))
-        town_meteo_data_day7 = get_town_full7_data(all_data_for_tm.filter_by_day(now + timedelta(days=6)))
-
-        cache.set_many({('%s_data_full7_day1' % town_meteo): town_meteo_data_day1
-            ,('%s_data_full7_day2' % town_meteo): town_meteo_data_day2
-            ,('%s_data_full7_day3' % town_meteo): town_meteo_data_day3
-            ,('%s_data_full7_day4' % town_meteo): town_meteo_data_day4
-            ,('%s_data_full7_day5' % town_meteo): town_meteo_data_day5
-            ,('%s_data_full7_day6' % town_meteo): town_meteo_data_day6
-            ,('%s_data_full7_day7' % town_meteo): town_meteo_data_day7})
-        print 2222
+#    cache.set_many({('%s_data_full7_day1' % town_meteo): town_meteo_data_day1
+#        ,('%s_data_full7_day2' % town_meteo): town_meteo_data_day2
+#        ,('%s_data_full7_day3' % town_meteo): town_meteo_data_day3
+#        ,('%s_data_full7_day4' % town_meteo): town_meteo_data_day4
+#        ,('%s_data_full7_day5' % town_meteo): town_meteo_data_day5
+#        ,('%s_data_full7_day6' % town_meteo): town_meteo_data_day6
+#        ,('%s_data_full7_day7' % town_meteo): town_meteo_data_day7})
+#    print 2222
+#----------------------------enfif---------
 
 #    all_data_for_tm           = all_data_for_town.filter_by_t_m(town_meteo)
 #
@@ -378,22 +381,23 @@ def get_town_full3_data(town_meteo_data, date):
 @register.inclusion_tag('table_data_full3.html')
 def get_town_full3(town_meteo, all_data_for_town):
 
-    if cache.get_many([('%s_data_full3_day1' % town_meteo)
-            ,('%s_data_full3_day2'           % town_meteo)
-            ,('%s_data_full3_day3'           % town_meteo)]):
+#    if cache.get_many([('%s_data_full3_day1' % town_meteo)
+#            ,('%s_data_full3_day2'           % town_meteo)
+#            ,('%s_data_full3_day3'           % town_meteo)]):
+#
+#        town_meteo_data_day1 = cache.get('%s_data_full3_day1' % town_meteo)
+#        town_meteo_data_day2 = cache.get('%s_data_full3_day2' % town_meteo)
+#        town_meteo_data_day3 = cache.get('%s_data_full3_day3' % town_meteo)
+#    else:
+    all_data_for_tm      = all_data_for_town.filter_by_t_m(town_meteo)
+    town_meteo_data_day1 = get_town_full3_data(all_data_for_tm, now)
+    town_meteo_data_day2 = get_town_full3_data(all_data_for_tm, now + timedelta(days=1))
+    town_meteo_data_day3 = get_town_full3_data(all_data_for_tm, now + timedelta(days=2))
 
-        town_meteo_data_day1 = cache.get('%s_data_full3_day1' % town_meteo)
-        town_meteo_data_day2 = cache.get('%s_data_full3_day2' % town_meteo)
-        town_meteo_data_day3 = cache.get('%s_data_full3_day3' % town_meteo)
-    else:
-        all_data_for_tm      = all_data_for_town.filter_by_t_m(town_meteo)
-        town_meteo_data_day1 = get_town_full3_data(all_data_for_tm, now)
-        town_meteo_data_day2 = get_town_full3_data(all_data_for_tm, now + timedelta(days=1))
-        town_meteo_data_day3 = get_town_full3_data(all_data_for_tm, now + timedelta(days=2))
-
-        cache.set_many({('%s_data_full3_day1' % town_meteo): town_meteo_data_day1
-            ,('%s_data_full3_day2' % town_meteo): town_meteo_data_day2
-            ,('%s_data_full3_day3' % town_meteo): town_meteo_data_day3})
+#    cache.set_many({('%s_data_full3_day1' % town_meteo): town_meteo_data_day1
+#        ,('%s_data_full3_day2' % town_meteo): town_meteo_data_day2
+#        ,('%s_data_full3_day3' % town_meteo): town_meteo_data_day3})
+#----------------------------enfif---------
 
     print 'town_meteo_data_day1 ', town_meteo_data_day1
     return {

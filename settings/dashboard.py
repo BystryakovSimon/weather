@@ -105,11 +105,17 @@ class CustomIndexDashboard(Dashboard):
                 modules.ModelList(
                     title=u'Djcelery',
                     models=(
-                        'djcelery.models.crontabschedule',
-                        'djcelery.models.intervalschedule',
-                        'djcelery.models.periodictasks',
-                        'djcelery.models.taskstate',
-                        'djcelery.models.workerstate',)
+                        'djcelery.models.CrontabSchedule',
+                        'djcelery.models.IntervalSchedule',
+                        'djcelery.models.PeriodicTasks',
+                        'djcelery.models.TaskState',
+                        'djcelery.models.WorkerState',)
+                ),
+                modules.ModelList(
+                    title=u'Djkombu',
+                    models=(
+                        'djkombu.models.Message',
+                        'djkombu.models.Queue',)
                 ),
                 modules.ModelList(
                     title=u'CMS',

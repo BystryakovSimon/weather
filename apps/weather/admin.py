@@ -66,7 +66,7 @@ class WLogAdmin(admin.ModelAdmin):
     list_display = ('date_record', 'town', 'meteocenter', 'time_update_meteo', 'meteo_update', 'data_update',)
 
     def time_update_meteo(self, obj):
-        return obj.time_update_meteo.time_update
+        return obj.time_update_meteo.time_update#.reverse()#.order_by('meteocenter')
 
     def town(self, obj):
         return obj.town_meteo.town

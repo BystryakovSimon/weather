@@ -138,7 +138,8 @@ INSTALLED_APPS = (
     
     'django.contrib.admin',
     'djcelery',
-#    'djkombu',
+    'djkombu',
+    'django_extensions',
 
     'cms',
     'cms.plugins.text',
@@ -163,6 +164,7 @@ INSTALLED_APPS = (
     'lib',
 #    'south',
     'weather',
+#    'wparser',
 )
 
 import djcelery
@@ -234,3 +236,58 @@ CELERYBEAT_SCHEDULER = "djcelery.schedulers.DatabaseScheduler"
 BROKER_BACKEND = "djkombu.transport.DatabaseTransport"
 
 TEST_RUNNER = 'djcelery.contrib.test_runner.CeleryTestSuiteRunner'
+
+
+
+
+#from celery import Celery
+#from django.conf import settings
+#wparser = Celery('settings')
+##app.config_from_object('django.conf:settings')
+##app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
+
+from datetime import timedelta
+
+CELERYBEAT_SCHEDULE = {
+    'start-every-60-minutes': {
+        'task': 'weather.tasks.WParser',
+#        'schedule': timedelta(seconds=10),
+#        'schedule': timedelta(hours=1),
+        'schedule': timedelta(minutes=60),
+#        'args': (16, 16)
+    },
+}
+
+# Name of nodes to start
+# here we have a single node
+CELERYD_NODES="weather_node"
+# or we could have three nodes:
+#CELERYD_NODES="w1 w2 w3"
+
+# Absolute path to "manage.py"
+CELERY_BIN=PROJECT_ROOT+"/manage.py"
+
+# How to call manage.py
+#CELERYD_MULTI="celery multi"
+
+# Extra command-line arguments to the worker
+##CELERYD_OPTS="--time-limit=300 --concurrency=8"
+
+# %N will be replaced with the first part of the nodename.
+#CELERYD_LOG_FILE=PROJECT_ROOT+"/celery/weather_log.log"
+#CELERYD_PID_FILE=PROJECT_ROOT+"/celery/weather.pid"
+#
+## CELERY SETTINGS
+#BROKER_URL = 'redis://localhost:6379/0'
+#CELERY_ACCEPT_CONTENT = ['json']
+#CELERY_TASK_SERIALIZER = 'json'
+#CELERY_RESULT_SERIALIZER = 'json'
+
+CELERY_TIMEZONE = 'Europe/Moscow'
+
+#Reserve one task at a time
+#CELERY_ACKS_LATE = True
+#CELERYD_PREFETCH_MULTIPLIER = 1
+
+# Extra arguments to celeryd
+#CELERYD_OPTS="--concurrency=1"

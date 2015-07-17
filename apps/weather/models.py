@@ -234,7 +234,7 @@ class WDataManager(models.query.QuerySet):
 
     def filter_by_hour(self):
         try:
-            a = self.filter(date_f__gt=now)
+            a = self.filter(date_f__gt=datetime.now())
         except Exception as e:
             print 'filter_by_hour Exception - %s' %e
             a = self
@@ -296,7 +296,7 @@ class WData(models.Model):
     g_hashtag   = models.ForeignKey(GeneralHashtag, verbose_name="Общий хэштег", related_name="get_datas_by_gh")
     date_f      = models.DateTimeField('Дата и время прогноза')
     data        = models.CharField('Данные', max_length=255)
-    d_data_upd  = models.DateTimeField('Дата получения данных', default=now)
+    d_data_upd  = models.DateTimeField('Дата получения данных', default=datetime.now())
 
     objects     = TransactionManager()
 
@@ -312,7 +312,7 @@ class WData(models.Model):
 
 # Логирование
 class WLog(models.Model):
-    date_record       = models.DateTimeField('Дата и время записи', default=now)
+    date_record       = models.DateTimeField('Дата и время записи', default=datetime.now())
     town_meteo        = models.ForeignKey(Town_MeteoCenter, verbose_name="Город-Метеоцентр", related_name="get_wlogs_by_tm")
     time_update_meteo = models.ForeignKey(TimeUpdate, verbose_name="Дата обновления метеоцентра", related_name="get_wlogs_by_tu")
     meteo_update      = models.BooleanField('Предоставляемые даные обновлены', default=False)
